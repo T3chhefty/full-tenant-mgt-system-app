@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tenant's Dashboard | Tenant Management System | T3ch Hefty</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="assets/img/img.jpg" type="image/x-icon" />
+  </head>
+  <body id="body">
+    <!-- start the main dashboard wrapper  -->
+    <div class="main-wrapper">
+      <!-- start main dashboard container -->
+      <div class="dashboard-container">
+        <!-- start side bar -->
+        <div class="side-bar">
+          <div class="dashboard-title-section">
+            <h2>🎪Hefty Homes</h2>
+          </div>
+          <div class="side-bar-items">
+            <ul>
+              <li class="dash-tab">⏬Dashboard</li>
+              <li id="supports-tab">💁Supports</li>
+              <li id="broadcast-tab">📢Broadcast</li>
+            </ul>
+          </div>
+        </div>
+        <!-- end side bar -->
+        <!-- start main details section -->
+        <div class="details-section">
+          <div class="dashboard-header">
+            <button id="btn">🌓</button>
+            <div class="profile-section">
+              <img src="assets/img/img.jpg" alt="Profile photo" />
+              <p>Tenant {Name}</p>
+              |<a href="../../index.html"> Logout</a>
+            </div>
+          </div>
+
+          <div class="main-section">
+            <div class="place-marker">
+              <h3 id="place-marker-tab">
+                Dashboard <span class="breadcrumb"></span>
+              </h3>
+
+              <!-- date and time section -->
+              <div class="date-and-time">
+                <p id="time"></p>
+                <b>|</b>
+                <p id="date"></p>
+              </div>
+              <!-- end  date and time section -->
+
+              <!-- create broadcast button -->
+
+              <button class="create-btn" id="create-broadcast-btn">
+                📢Create Broadcast
+              </button>
+
+              <!-- support button -->
+              <button class="create-btn" id="create-support-btn">
+                💁Create Supports
+              </button>
+            </div>
+
+            <div class="dashboard-contents">
+              <div class="main-section-content-container" id="t-prop">
+                <h3>Property</h3>
+                <h2>Grace Land Estate</h2>
+              </div>
+              <div class="main-section-content-container" id="t-tent">
+                <h3>Unit</h3>
+                <h2>1</h2>
+              </div>
+              <div class="main-section-content-container" id="t-exp">
+                <h3>Rent</h3>
+                <h2>#500,000</h2>
+              </div>
+              <div class="main-section-content-container" id="t-income">
+                <h3>Support Requested</h3>
+                <h2>3</h2>
+              </div>
+            </div>
+
+            <!-- start Tenants Section -->
+            <div class="tenant-section">
+              <!-- *************************************************************************************************** -->
+              <!-- create Tenant Form -->
+              <div class="main-tenant-form-wrapper">
+                <div class="form-container">
+                  <!-- close butoon container -->
+                  <div class="close-btn-container">
+                    <span class="close-btn" onclick="toggleForm()">❌</span>
+                  </div>
+                  <!-- end close button container -->
+                  <form action="">
+                    <div class="form-divs-container">
+                      <div class="form-section-one">
+                        <label for=""
+                          >Full Name:* <br />
+                          <input type="text" placeholder="Enter Name" required
+                        /></label>
+                        <br />
+                        <label for=""
+                          >Email:* <br /><input
+                            type="email"
+                            placeholder="yourName@example.com"
+                            required
+                        /></label>
+                        <br />
+                        <label for=""
+                          >Address:* <br /><input
+                            type="text"
+                            placeholder=" property Address"
+                            required
+                        /></label>
+                        <br />
+                        <label for=""
+                          >Phone:* <br /><input
+                            type="tel"
+                            placeholder="EnterPhone Number"
+                            required
+                        /></label>
+                        <br />
+                        <label for=""
+                          >Family Members:* <br /><input
+                            type="number"
+                            placeholder="Family Members"
+                            required
+                        /></label>
+                        <br />
+                        <label for=""
+                          >Upload Photo:* <br /><input
+                            type="file"
+                            placeholder="photo"
+                            required
+                        /></label>
+                        <br />
+                      </div>
+                      <div class="form-section-two">
+                        <label for=""
+                          >Upload Valid ID:* <br /><input
+                            type="file"
+                            placeholder="Driver's Licence, Voters Card etc"
+                            required
+                        /></label>
+                        <br />
+                        <label for=""
+                          >Password:* <br />
+                          <input
+                            type="password"
+                            placeholder="password"
+                            required
+                        /></label>
+                        <br />
+                        <label for=""
+                          >Confirm Password:* <br />
+                          <input
+                            type="password"
+                            placeholder=" Confirm password"
+                            required
+                        /></label>
+                        <br />
+                        <label for=""
+                          >Property* <br />
+                          <select name="" id="">
+                            <option value="Grace Land Estate">
+                              Grace Land Estate
+                            </option>
+                            <option value="Grace Land Estate">
+                              Ocean View Apartments
+                            </option>
+                            <option value="Grace Land Estate">
+                              City Villa Lodge
+                            </option>
+                          </select></label
+                        >
+                        <br />
+
+                        <label for=""
+                          >Lease Start Date:* <br /><input
+                            type="date"
+                            placeholder="Family Members"
+                            required
+                        /></label>
+                        <br />
+                        <label for=""
+                          >Lease End Date:* <br />
+                          <input
+                            type="date"
+                            placeholder="Family Members"
+                            required
+                        /></label>
+                        <br />
+                      </div>
+                    </div>
+
+                    <div class="submit-btn-container">
+                      <input type="submit" value="Create Tenant" />
+                    </div>
+                  </form>
+
+                  <!-- **************************************************************************************************** -->
+                </div>
+              </div>
+
+              <!--End  create Tenant Form -->
+              <div class="tenant-container">
+                <div class="tenant-section-header">
+                  <img src="assets/img/img.jpg" alt="photo" />
+
+                  <div class="name-and-email-wrapper">
+                    <h2>Kachi Godwin</h2>
+                    <p>kachi.godwin@gmail.com</p>
+                  </div>
+                </div>
+                <div class="tenant-info">
+                  <h3>Information</h3>
+                  <small>Obinze Owerri, Imo State, NG 87894 </small> <br />
+                  <p><b>Phone:</b> 08039422817</p>
+                  <p><b>Family Members:</b>5</p>
+                  <p><b>Property:</b> Grace Land Estate</p>
+                  <p><b>Unit:</b> Unit 1</p>
+                  <p><b>Lease Start Date:</b> July 1, 2023</p>
+                  <p><b>Lease End Date:</b> July 1, 2024</p>
+                </div>
+                <div class="tenant-btn-container">
+                  <button id="edit-btn">📝</button>
+                  <button id="del-btn">❌</button>
+                </div>
+              </div>
+              <!-- second sample Tenant -->
+            </div>
+
+            <!-- start supports section -->
+            <div class="supports-section">
+              <div class="properties-container">
+                <h1>💁Supports</h1>
+              </div>
+            </div>
+            <!-- end supports section -->
+
+            <!-- start Broadcast section -->
+            <div class="broadcast-section">
+              <div class="properties-container">
+                <h1>📢Broadcast</h1>
+              </div>
+            </div>
+            <!-- end broadcast section -->
+          </div>
+        </div>
+        <!-- end main details section -->
+      </div>
+      <!-- end main dashboard container -->
+    </div>
+    <!-- end main dashboard wrapper -->
+    <script src="assets/js/main.js"></script>
+    <script src="../landlord-dashboard/assets/js/date-and-time.js"></script>
+  </body>
+</html>

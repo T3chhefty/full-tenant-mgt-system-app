@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(../img/home-img.jpg);
+  background-color: aliceblue;
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  /* change background animation */
+  animation-name: changeBG ;
+  animation-duration:20s;
+  animation-iteration-count: infinite;
+  background-position:center ;
+  /* transform: scale(0.05); */
+  transition: 15s;
+  overflow: hidden;
+}
+
+.main-container-wrapper {
+  background-color: rgba(0, 0, 0, 0.612);
+  width: 100vw;
+  height: 100vh;
+}
+
+.main-container {
+  color: #fff;
+  /* width: 80%;
+  height: 100%; */
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 45%;
+  left: 50%;
+
+   /* animation herer */
+   animation-name: animation2;
+   animation-iteration-count:2s;
+   animation-duration: 2s;
+
+}
+
+.main-container  h1{
+    font-size: 3rem;
+    text-align: center;
+    /* line-height: 4rem; */
+    font-weight: 900;
+   
+}
+
+#login-btn{
+    background-color: #165B87;
+    color: #fff;
+    margin: 1em 0 0 0;
+    width: 20rem;
+    height: 9vh;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.5rem;
+    /* font-weight: 600; */
+    transition: 2s;
+    outline: 2px solid #fff inset;
+    /* animation */
+    animation-name: animation1;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+
+#login-btn:hover{
+    background-color: #165c87e1;
+    transform: scale(1.5);
+}
+
+.big-txt{
+    font-size: 5rem !important;
+    text-shadow: -1px 5px 3px rgba(0,0,0,0.33);
+    /* margin: 0 0 -0.3em 0; */
+}
+
+.mid-txt{
+    font-size: 3rem !important;
+    color: goldenrod;
+    font-family: monospace;
+    text-shadow: -1px 5px 3px rgba(0,0,0,0.33);
+}
+
+.description{
+    text-shadow: -1px 5px 3px rgba(0,0,0,0.33);
+    margin: 1em 0 0 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* .mid-txt, .big-txt{
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+} */
+/* for marquee */
+
+marquee{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #fff;
+    /* background-color: #0f101181; */
+    height: 3rem;
+    font-family: monospace;
+}
+
+
+
+/* some animation */
+@keyframes changeBG {
+    0%{ background: url(../img/img2.jpg)}
+    25%{background: url(../img/img3.jpg);}
+    45%{background: url(../img/img4.jpg);}
+    75%{background: url(../img/img5.jpg);}
+    100%{background: url(../img/home-img.jpg);}
+}
+
+@keyframes animation1 {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
+}
+
+
+@keyframes animation2 {
+    from{
+        transform: scale(0.9);
+    }
+    /* to{
+        transform: scale();
+    } */
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    body{
+        overflow: hidden;
+    }
+    .main-container{
+        font-size: 0.1rem !important;
+        text-align: center !important;
+    }
+    .mid-txt{
+        font-size: 2rem !important;
+    }
+
+  }
